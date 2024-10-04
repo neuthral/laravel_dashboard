@@ -15,13 +15,60 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <style>
+        body {
+            background-color: #1F1F1E;
+            color: #FCF2E0;
+        }
+        .card {
+            background-color: #262625;
+        }
+        .box-container {
+            display: flex;
+            justify-content: end;
+        }
+        .box {
+            background-color: #2C2C2B;
+            text-align: right;
+            color: #A8A196;
+        }
+        .box-icon {
+            display: block;
+            background-color: #1F1F1E;
+            height:64px; 
+            float:left;
+            margin-right: 4px;
+            color: #FCF2E0;
+        }
+        .box span {
+            display: block;
+            padding: 4px;
+            height: 80%;
+        }
+        .box h4 {
+            margin: 0;
+            padding: 0;
+            line-height: 0px;
+            padding-right: 4px;
+            padding-bottom: 4px;
+            color: #FCF2E0;
+        }
+        .bg-dark-1 {
+            background-color: #1F1F1E;
+        }
+        .bg-dark-2 {
+            background-color: #262625;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light border-bottom">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <x-heroicon-s-cube style="height:2vw;"/>
+                    {{ config('app.name', 'system') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -50,7 +97,7 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="#" role="button">
+                                <a class="nav-link" href="home" role="button">
                                     {{ Auth::user()->name }}
                                 </a>
                             </li>

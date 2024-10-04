@@ -2,8 +2,22 @@
 
 @section('content')
 
-<div class="container">
-    <h1>GG</h1>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                
+            </div>
+
+            <style>
+                svg {
+                    fill:#121416;
+                }
+            </style>
+            <div class="col">
+                {!! $qr !!}
+            </div>
+        </div>
+        
+    </div>
 
 @endsection
