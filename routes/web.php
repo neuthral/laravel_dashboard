@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 use splitbrain\phpQRCode\QRCode;
 
 Route::get('/', function () {
